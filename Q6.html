@@ -1,0 +1,80 @@
+<html>
+    <body>
+        <form>
+            <pre>
+This survey is bieng conducted to help the internet usage pattern of our customer
+please take a few moments to complete and submit this short form. thamk you for your cooperation.<br>
+            </pre>
+            <table>
+                <tr>
+                    <td>
+                        What type of internet connection do you have?<br>
+                        (select one)
+                    </td>
+                    <td>
+                        <select name="conn" id="conn">
+                            <option value="dial" >Dial-up</option>
+                            <option value="dsl" >DSL</option>
+                            <option value="high" >High speed cable</option>
+                            <option value="other" >other</option>
+
+                        </select>
+                    </td>
+                </tr>
+                    <tr>
+                        <td>
+                            What type of computer do you use at home
+                        </td>
+                        <td>
+                            <input type="radio" name="home" id="desk" value="desk"/>
+                            <label for="desk">Desktop</label>
+                            <input type="radio" name="home" id="Laptop" value="Laptop"/>
+                            <label for="Laptop">Laptop</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            What would you describe your main reason for using the internet?
+
+                        </td>
+                        <td>
+                            <input type="radio" name="use" id="work" value="work"/>
+                            <label for="work">To do wrk-related activities</label><br>
+                            <input type="radio" name="use" id="school" value="school"/>
+                            <label for="school">To do school related activities</label><br>
+                            <input type="radio" name="use" id="entertainment" value="entertainment"/>
+                            <label for="entertainment">For entertainment purpose</label><br>
+                            <input type="radio" name="use" id="other" value="other"/>
+                            <label for="other">other activities</label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend>
+                                    types of site visited
+                                </legend>
+                                What type of web sited do you access most often?<br>
+                                Check all that apply:<br>
+                                <input type="checkbox" name="web" id="self" value="self"/>
+                            <label for="self">Self Improvement</label><br>
+                            <input type="checkbox" name="web" id="Enter" value="Enter"/>
+                            <label for="Enter">Entertainment</label><br>
+                            <input type="checkbox" name="web" id="news" value="news"/>
+                            <label for="news">News and sports</label><br>
+                            <input type="checkbox" name="web" id="ref" value="ref"/>
+                            <label for="ref">Refernce</label><br>
+                            <input type="checkbox" name="web" id="email" value="email"/>
+                            <label for="email">Email</label>
+
+                            </fieldset>
+                        </td>
+                    </tr>
+
+                
+            </table>
+
+        </form>
+    </body>
+</html>
