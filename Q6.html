@@ -1,6 +1,12 @@
 <html>
     <body>
+        <fieldset>
+
         <form>
+            <h1>
+                Internet using survey
+            </h1>
+
             <pre>
 This survey is bieng conducted to help the internet usage pattern of our customer
 please take a few moments to complete and submit this short form. thamk you for your cooperation.<br>
@@ -70,11 +76,74 @@ please take a few moments to complete and submit this short form. thamk you for 
 
                             </fieldset>
                         </td>
+                    
+                    
+                        <td >
+                            <fieldset>
+                                <legend>
+Time spent using Internet                                </legend>
+                                During an average week , how long do you spend online?<br>
+                                <input type="radio" name="web" id="self" value="self"/>
+                            <label for="self">0-3 hours</label><br>
+                            <input type="radio" name="web" id="Enter" value="Enter"/>
+                            <label for="Enter">4-6 hours</label><br>
+                            <input type="radio" name="web" id="news" value="news"/>
+                            <label for="news">7-10 hours</label><br>
+                            <input type="radio" name="web" id="ref" value="ref"/>
+                            <label for="ref">11-14 hours</label><br>
+                            <input type="radio" name="web" id="email" value="email"/>
+                            <label for="email">15+ hours</label>
+
+                            </fieldset>
+                        </td>
                     </tr>
+                    <tr>
+                        <td>
+                            Please comment on your opinions concerning Internet privacy and safety<br>
+                            <textarea name="comment" id="comment" rows="5" cols="100"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                            Full name: 
+                        <input type="text">
+                    </td>
+                    <td>
+                        Last name:
+                        <input type="text">
+
+
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            age:
+                            <input type="text">
+
+                        </td>
+                        <td>
+                            Zip code:
+                            <input type="text">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <input type="submit" name="sub" id="sub" value="Click to submit">
+                        </td>
+                        <td align="left">
+                            <input type="reset" name="res" id="res" value="Clear form">
+                        </td>
+                    </tr>
+
+                    
 
                 
             </table>
 
         </form>
+    </fieldset>
+
     </body>
 </html>
