@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            function addnumber()
+            {
+                var num1=parseInt(document.getElementById("n1").value);
+                var num2=parseInt(document.getElementById("n2").value);
+                var ans=num1+num2;
+                document.getElementById("r").value=ans;
+                document.getElementById("mydiv").innerHTML="Addition : "+ans;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+        Number1 : <input type="text" name="n1" id="n1"><br><br>
+        Number2 : <input type="text" name="n2" id="n2"><br><br>
+        Result : <input type="text" name="result" id="r" disabled><br><br>
+        <button type="button" name="b" id="b1" onclick="addnumber()" >click to add numbers</button>
+    </form>
+    <div id="mydiv">
+
+    </div>
+
+        
+
+    </body>
+</html>
+<!-- this gives result in RESULT textbox. -->
