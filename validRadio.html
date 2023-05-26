@@ -17,7 +17,7 @@
             }
             function validatedegree()
             {
-                var arr=document.getElementById("deg")
+                var arr=document.getElementsByName("deg")
                 for(var i=0 ;i<arr.length ; i++)
                 {
                     if(arr[i].checked)
@@ -29,16 +29,22 @@
 
                 }
                 document.getElementById("errdeg").innerHTML="degree not selected"   
-                return false;     
+                return false;  
 
             }
+            
+                
+            
+            
+            
+            
             function validatedata()
             {
-                var f=validatename();
-                var f1=validatedegree();
+                var f1=validatename();
+               var f=validatedegree();
                 if(f && f1)
                 {
-                    var op="name :"+a +"degree"+data;
+                    var op="name :"+a+"<br> Degree :"+data;
                     document.getElementById("mydiv").innerHTML=op
                 }
                 else{}
@@ -48,17 +54,17 @@
         </script>
     </head>
     <body>
-        <form>
+    
             Name : <input type="text" id="ip"><span id="errnm"></span><br><br>
 
             Select Degree :
-            <input type="radio" name="deg" id="be"><label for="be">BE</label>
-            <input type="radio" name="deg" id="btech"><label for="btech">BTECH</label>
-            <input type="radio" name="deg" id="mtech"><label for="mtech">MTECH</label>
+            <input type="radio" name="deg" id="be" value="be"><label for="be">BE</label>
+            <input type="radio" name="deg" id="btech" value="btech"><label for="btech">BTECH</label>
+            <input type="radio" name="deg" id="mtech" value="mtech"><label for="mtech">MTECH</label>
             <span id="errdeg"></span><br>
             <button type="button" id="show" name="show" value="show" onclick="validatedata()">Show data</button>
 
-        </form>
+        
         <div id="mydiv">
 
         </div>
