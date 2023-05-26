@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <script>
+            function selectcase()
+            {
+                var a=document.getElementById("op");
+                var num=a.selectedIndex
+              //  alert(a.selectedIndex);
+                var calc=a.options[num].value;
+                var str=document.getElementById("ip").value;
+            
+            switch(calc){
+            case "upper" :
+            result="uppercase " + str.toUpperCase();
+            break;
+
+            case "lower" :
+                result="Lowercase " + str.toLowerCase();
+                break;
+            case "charAt" :
+               var a =prompt("Enter index")
+
+                result ="char at  " +a +" : "+ str.charAt(a);
+            case "slice":
+              var a=prompt("Enter range")
+              var arr=a.split(",")
+              result=str.slice(arr[0],arr[1])     
+            case "" 
+        }
+        document.getElementById("mydiv").innerHTML=result
+      
+    }
+        </script>
+    </head>
+    <body>
+          <form>
+            Enter String : <input type="text" id="ip" name="ip">
+            Operation :
+            <select id="op" name="op">
+                <option value="upper" >Uppercase</option>
+                <option value="lower">lower case</option>
+                <option value="charAt">charAt</option>
+                <option value="slice">slice</option>
+                <option value="concat">concat</option>
+                <option value="match">match</option>
+                <option value="search">search</option>
+                <option value="replace">replace</option>
+                <option value="split">split</option>
+                <option value="indexof">indexof</option>
+                <option value="includes">includes</option>
+         
+            </select>
+            <button type="button" id="btn" value="btn" name="btn" onclick="selectcase()">
+                dislplay result
+
+            </button>
+        </form>
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>

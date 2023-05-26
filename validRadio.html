@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <script>
+            var a;
+            var data;
+            function validatename()
+            {
+                a=document.getElementById("ip").value;
+
+                if((a==="") || (a.trim().length===0))
+                {
+                    document.getElementById("errnm").innerHTML="name cannot be blank"
+                    return false;
+                }
+                document.getElementById("errnm").innerHTML=""
+                return true;
+            }
+            function validatedegree()
+            {
+                var arr=document.getElementById("deg")
+                for(var i=0 ;i<arr.length ; i++)
+                {
+                    if(arr[i].checked)
+                    {
+                        data=arr[i].value
+                        document.getElementById("errdeg").innerHTML=""     
+                        return true;   
+                    }
+
+                }
+                document.getElementById("errdeg").innerHTML="degree not selected"   
+                return false;     
+
+            }
+            function validatedata()
+            {
+                var f=validatename();
+                var f1=validatedegree();
+                if(f && f1)
+                {
+                    var op="name :"+a +"degree"+data;
+                    document.getElementById("mydiv").innerHTML=op
+                }
+                else{}
+            }
+           
+
+        </script>
+    </head>
+    <body>
+        <form>
+            Name : <input type="text" id="ip"><span id="errnm"></span><br><br>
+
+            Select Degree :
+            <input type="radio" name="deg" id="be"><label for="be">BE</label>
+            <input type="radio" name="deg" id="btech"><label for="btech">BTECH</label>
+            <input type="radio" name="deg" id="mtech"><label for="mtech">MTECH</label>
+            <span id="errdeg"></span><br>
+            <button type="button" id="show" name="show" value="show" onclick="validatedata()">Show data</button>
+
+        </form>
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>

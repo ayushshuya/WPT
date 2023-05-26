@@ -1,0 +1,19 @@
+if(typeof(Storage)!== undefined)
+{
+    if(localStorage.count===undefined || localStorage.count==="0" )
+    {
+         localStorage.count=0;
+     }
+     else
+     {
+      //val=parseInt(localStorage.count)
+      val=parseInt(localStorage.getItem("count"))
+      localStorage.count=val-1
+     }
+    }
+else
+{
+      document.getElementById("mydiv").innerHTML="web storage is not supported"  
+}
+
+  document.getElementById("mydiv").innerHTML="you clicked "+localStorage.count+ " times";

@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <script>
+            function increment()
+            {
+                if(typeof(Storage)!==undefined)
+                {
+                    if(localStorage.count===undefined)
+                    {
+                        localStorage.count=1
+                    }
+                    else
+                    {
+                        val=parseInt(localStorage.count)
+                        localStorage.count=val+1
+
+                    }
+                    document.getElementById("mydiv").innerHTML=+localStorage.count+"times"
+
+                    
+                }
+                else
+                { 
+                    document.getElementById("mydiv").innerHTML="wrong storage"
+                }
+            
+            }
+            function decrement()
+            {
+                if(typeof(Storage)!==undefined)
+                {
+                    if(localStorage.count===undefined || localStorage.count==="0")
+                    {
+                        localStorage.count=0;
+                    }
+                    else{
+                    val=parseInt(localStorage.count)
+                    localStorage.count=val-1
+                    }
+                }
+                else
+                { 
+                    document.getElementById("mydiv").innerHTML="web storage is not supported"  
+                
+                }
+                document.getElementById("mydiv").innerHTML="you clicked "+localStorage.count+ " times";
+
+            }
+            function remove()
+            {
+                if(typeof(Storage)!== undefined)
+                {
+                if(localStorage.count!==undefined)
+                {
+                    localStorage.removeItem("count");
+                }
+            }
+            else
+            {
+                document.getElementById("mydiv").innerHTML="web storage is not supported"  
+
+
+            }
+
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <form>
+            <button type="button" id="inc" name="inc" onclick="increment()">Increment</button>
+            <button type="button" id="dec" name="dec" onclick="decrement()">decrement</button>
+            <button type="button" id="rem" name="rem" onclick="remove()">remove</button>
+
+        </form>
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>
