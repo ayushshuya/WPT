@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+            function largest(){
+                var a=parseInt(document.getElementById("n1").value)
+                var b=parseInt(document.getElementById("n2").value)
+                var c=parseInt(document.getElementById("n3").value)
+                 var largest;
+                if(a>b && a>c)
+                {
+                    largest= a;
+                }
+                else if(b>c)
+                {
+                largest= b;
+                }
+
+                else 
+                largest= c;
+                document.getElementById("mydiv").innerHTML="largest : "+ largest;
+
+
+            }
+            function res(){
+                document.getElementById("mydiv").innerHTML=""
+            }
+        </script>
+
+    </head>
+    <body>
+        <form>
+        N1 : <input type="text" id="n1"><br>
+        N2 : <input type="text" id="n2"><br>
+        N3 : <input type="text" id="n3"><br><br>
+        <button type="button" id="btn" onclick="largest()">Find</button>
+        <button type="button" onclick="res()">Reset</button>
+    </form>
+    <div id="mydiv">
+
+    </div>
+
+
+    </body>
+</html>
