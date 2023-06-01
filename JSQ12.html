@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+            arr=[];
+            var str;
+            function displayed(){
+                
+                
+                    str="<ul>"
+                        for(var i=0;i<arr.length;i++)
+                        {
+                       str+="<li>"+arr[i]+"</li>"
+                        } 
+                    str+="</ul>" 
+                   
+                
+                document.getElementById("mydiv").innerHTML=str;
+
+                
+            }
+            function addname(){
+                var g=document.getElementById("name").value;
+                document.getElementById("name").value="";
+                arr.push(g);
+
+            }
+
+        </script>
+    </head>
+    <body>
+        Name: <input type="text" name="name" id="name">
+        <button type="button" name="btn" id="add" value="add" onclick="addname()">add new name</button>
+        <button type="button" name="btn" id="add1" value="dis" onclick="displayed()">show names</button>
+        <div id="mydiv">
+
+        </div>
+
+    </body>
+</html>

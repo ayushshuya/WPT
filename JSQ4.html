@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <script>
+            
+            function print(){ 
+                var sel=document.getElementById("operation");
+                var pos=sel.selectedIndex
+                
+                var calc=sel.options[pos].value;
+                var a=parseInt(document.getElementById("n1").value);
+                var b=parseInt(document.getElementById("n2").value);
+                switch(calc){
+                case "add":
+                    var result= a+b ;
+                    break;
+
+                    case "sub":
+                    var result= a-b ;
+                    break;
+
+                    case "multi":
+                    var result= a*b ;
+                    break;
+
+                    case "div":
+                    var result= a/b ;
+                    break;
+
+
+
+                }
+                document.getElementById("mydiv").innerHTML=result
+        }
+       
+
+        </script>
+    </head>
+    <body>
+        <form>
+        
+        Enter no1 : <input type="text" id="n1">
+        Enter no2 : <input type="text" id="n2">
+        
+        Enter operator : <select name="op" id="operation">
+            <option value="add">addtion</option>
+            <option value="sub">sustraction</option>
+            <option value="multi">multiplication</option>
+            <option value="div">division</option>
+            </select>
+        <button type="button" onclick="print()">print</button>
+
+    </form>
+    <div id="mydiv" >
+
+    </div>
+
+
+    </body>
+</html>

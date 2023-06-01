@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            arr=["ayush","piyush","yash"]
+            
+
+            
+            function displaytable(){
+                var content="Members of my group are :</b><br>";
+               
+                    for (var i=0;i<arr.length;i++)
+                    {
+                     str=arr[i];
+                     content+=str.toUpperCase()+"<br>";
+
+                    }
+                
+                    document.getElementById("mydiv").innerHTML=content
+            }
+            </script>
+            </head>
+            <body onload="displaytable()"><fieldset style="width:200">
+              <!-- <button type="button" onclick="displaytable()">Display</button> -->
+                <div id="mydiv">
+
+                </div>
+            </fieldset>
+            </body>
+            </html>

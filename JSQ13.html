@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script>
+            arr=[{empid:1 ,empname:'ayush' ,salary:80000 },
+            {empid:2 , empname: 'piyush' , salary: 50000},
+            {empid:3 , empname: 'yash', salary:60000}
+
+            ]
+            function displaytable(){
+                str=`<table border=2><tr><th>Empid</th><th>Emname</th><th>salary</th>`
+                    for (var o of arr)
+                    {
+                    str+=`<tr><td>${o.empid}</td><td>${o.empname}</td><td>${o.salary}</td>`
+                    }
+                    str+=`</table>`
+                    document.getElementById("mydiv").innerHTML=str
+            }
+           function updatetable(){
+                var a=document.getElementById("id").value
+                var b=document.getElementById("name").value
+                var c=document.getElementById("salary").value
+                ob={empid:parseInt(a),empname:b,salary:parseFloat(c)}
+                arr.push(ob);
+                clearform();
+               }
+
+
+
+            function clearform(){
+                document.getElementById("id").value=""
+document.getElementById("name").value=""
+document.getElementById("salary").value=""
+
+            }
+            
+
+        </script>
+    </head>
+    <body>
+        <button type="button" id="btn" name="btn" onclick="displaytable()">Display</button><br>
+        <button type="button" id="btn1" name="btn1" onclick="updatetable()">updatetable</button><br>
+        enter id : <input type="text" id="id" name="id">
+        enter Name : <input type="text" id="name" name="name">
+        enter salary : <input type="text" id="salary" name="salary">
+
+
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>
