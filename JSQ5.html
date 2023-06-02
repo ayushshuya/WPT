@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            function displaytable(){
+            var a=parseInt(document.getElementById("n1").value)
+            var str="";
+            for(var i=1;i<=10;i++)
+            {
+               str+= a+" * "+i+" = "+a*i +"<br>";
+                
+                
+            }
+            
+            
+            document.getElementById("mydiv").innerHTML=str;
+            }
+
+
+        </script>
+    </head>
+    <body>
+        Enter number:<input type="text" id="n1" name="n1">
+        <button type="button" id="btn" name="btn" onclick="displaytable()">Display</button><br>
+        <div id="mydiv">
+
+        </div>
+
+    </body>
+</html>

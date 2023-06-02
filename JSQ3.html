@@ -2,16 +2,19 @@
     <head>
         <script>
             function even(){
-                var i=i;
+            var i=1;
             var a=parseInt(document.getElementById("n1").value);
-            
-            while( i<=a)
+            var op="";
+            while(i<=a)
             {
-                i%2==0;
-                var op=i;
-                document.getElementById("mydiv")=op;
-                i++;
+                if(i % 2==0)
+                {
+                op+=i+"<br>";
             }
+                i++;
+                
+            }
+            document.getElementById("mydiv").innerHTML=op;
         }
 
         </script>
