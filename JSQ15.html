@@ -1,0 +1,35 @@
+    <html>
+        <head>
+            <script>
+               var arr=["ayush","piyush","yash","raj","iacsd"]
+               var arr1=[];
+                function rev(){
+                    
+                    c=""
+
+                    for(var i=0;i<arr.length;i++)
+                    {
+                        str=arr[i];
+                        content=str.split("");
+                        con=content.reverse();
+                        c+=con.join("")+"<br>";
+                        
+
+                        
+
+                    }
+                    arr1.push(c)
+                        arr1.sort()
+                    document.getElementById("mydiv").innerHTML=arr1
+                }
+            
+            </script>
+
+        </head>
+        <body onload="rev()">
+            <div id="mydiv">
+
+            </div>
+
+        </body>
+    </html>

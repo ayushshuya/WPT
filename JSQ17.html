@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+            function calc(){
+            var r=parseInt(document.getElementById("rad").value)
+            var area=3.14*r*r;
+            var peri=2*3.14*r;
+            document.getElementById("mydiv").innerHTML=area;
+            document.getElementById("mydiv1").innerHTML=peri;
+            }
+            
+
+
+
+        </script>
+    </head>
+    <body>
+        <fieldset style="width:200">
+        Enter Radius : <input type="text" id="rad" name="rad" autofocus><br><br>
+        <button type="button" id="btn" name="btn" onclick="calc()">display</button>
+        <div id="mydiv">
+            Area:
+
+        </div>
+        <div id="mydiv1">
+            Cercumference:
+
+        </div>
+    </fieldset>
+    </body>
+
+</html>

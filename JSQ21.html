@@ -1,0 +1,27 @@
+
+<html >
+<head>
+    <script>
+        arr=["John","Steve","Ben","Doman","Ian"]
+        function displaylist(){
+    
+        
+        str=`Members of my group are <br><ul>`
+        for(var i=0;i<arr.length;i++)
+        {
+            str+=`<li>${arr[i]}</li>`
+                
+
+        }
+        str+=`</ul>`
+        document.getElementById("mydiv").innerHTML=str;
+    }
+    </script>
+</head>
+<body onload="displaylist()">
+    <div id="mydiv">
+
+    </div>
+
+</body>
+</html>

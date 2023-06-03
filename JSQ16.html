@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            arr=["www.google.com","www.msn.com","www.amazon.com","in.answers.yahoo.com","en.m.wikipedia.com","codehs.gitbook.io","www.coderanch.com"]
+            function search(){
+            str=""
+            content=""
+            for(var i=0;i<arr.length;i++)
+            {
+                str=arr[i];
+                if(str.match("www"))
+                {
+                content+=str+"<br>";
+                }
+            } 
+            alert(content)
+            document.getElementById("mydiv").innerHTML=content;
+            }
+        </script>
+    </head>
+    <body onload="search()">
+        <div id="mydiv">
+
+        </div>
+
+    </body>
+</html>

@@ -4,31 +4,38 @@
             arr=[];
             var str;
             function displayed(){
+                arr.sort();
+                str=""
                 
-                
-                    str="<ul>"
-                        for(var i=0;i<arr.length;i++)
+                    
+                        for(var i=0;i<=arr.length;i++)
                         {
-                       str+="<li>"+arr[i]+"</li>"
+                       str+=arr[i]+"<br>";
+                       
                         } 
-                    str+="</ul>" 
+                    
+
                    
-                
+                        
                 document.getElementById("mydiv").innerHTML=str;
 
                 
             }
             function addname(){
-                var g=document.getElementById("name").value;
+                g=document.getElementById("name").value;
                 document.getElementById("name").value="";
+                document.getElementById("name").focus();
                 arr.push(g);
-
+                
             }
+               
+
+            
 
         </script>
     </head>
     <body>
-        Name: <input type="text" name="name" id="name">
+        Name: <input type="text" name="name" id="name" >
         <button type="button" name="btn" id="add" value="add" onclick="addname()">add new name</button>
         <button type="button" name="btn" id="add1" value="dis" onclick="displayed()">show names</button>
         <div id="mydiv">
