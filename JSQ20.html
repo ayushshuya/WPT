@@ -1,27 +1,29 @@
 <html>
     <head>
         <script>
-            arr=["ayush","piyush","yash"]
+            arr=["john","steve","ben","damon","ian"]
             
 
             
             function displaytable(){
-                var content="Members of my group are :</b><br>";
+                var content="Members of my group are : ";
                
                     for (var i=0;i<arr.length;i++)
                     {
                      str=arr[i];
-                     content+=str.toUpperCase()+"<br>";
+                     content+=str.toUpperCase()+",";
 
                     }
+                    var result=content.slice(0,content.length-1);
                 
-                    document.getElementById("mydiv").innerHTML=content
+                    document.getElementById("mydiv").innerHTML=result;
             }
             </script>
             </head>
             <body onload="displaytable()"><fieldset style="width:200">
               <!-- <button type="button" onclick="displaytable()">Display</button> -->
                 <div id="mydiv">
+                    
 
                 </div>
             </fieldset>

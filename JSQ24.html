@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <script>
+        var un;
+        var pass;
+        function validate() {
+            validate_un();
+            validate_pass();
+
+        }
+        function validate_un() {
+            un = document.getElementById("un").value;
+            if (un==="" || un.trim().length === 0) {
+                document.getElementById("errun").innerHTML = "Username cannot be empty";
+                return false;
+
+            }
+            else
+            {document.getElementById("errun").innerHTML = " ";
+            
+            }
+            if(un.length<6 || un.length>10){
+                document.getElementById("errun1").innerHTML = "check length of username"
+                
+            }
+            else{
+                document.getElementById("errun1").innerHTML = " ";
+                return true;
+
+            }
+
+             
+
+        }
+        function validate_pass() {
+            pass = document.getElementById("pass").value;
+            if (pass === "" || pass.trim().length === 0) {
+                document.getElementById("errpass").innerHTML = "Password cannot be empty"
+                return false;
+            }
+            document.getElementById("errpass").innerHTML = ""
+            return true;
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <form>
+    Username : <input type="text" id="un" name="nm"><span id="errun"></span><span id="errun1"></span><br>
+    Password : <input type="text" id="pass" name="pass"><span id="errpass"></span><br>
+    <button type="button" id="btn" name="btn" onclick="validate()">Login</button><br>
+</form>
+
+</body>
+
+</html>
