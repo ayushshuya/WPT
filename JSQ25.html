@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <script>
+            arr=[];
+            var cn;
+            function validate()
+            {
+                validatecust();
+                add_data();
+            }
+            function validatecust(){
+                cn=document.getElementById("cname").value
+                if(cn.length<6)
+                {
+                    document.getElementById("errcust").innerHTML=" * Customer name cannot be < 6";
+                    return false;
+                }
+                else
+                document.getElementById("errcust").innerHTML=""
+                return true;
+
+
+            }
+            function displaydata(){
+                for (var o of arr)
+                str=""
+                    {
+                    str+=`order id:${o.ordervalue}<br>cust name :${o.cnamevalue}<br>billing date : ${o.billdtvalue}<br>Shipping date: ${o.shipdtvalue}<br>order total: $ ${o.ottlvalue}`
+                    }
+                    
+                    document.getElementById("mydiv").innerHTML=str
+
+
+            }
+            function add_data(){
+                var ordervalue=document.getElementById("oid").value
+                var cnamevalue=document.getElementById("cname").value
+                var billdtvalue =document.getElementById("bdt").value
+                var shipdtvalue =document.getElementById("sdt").value
+                var ottlvalue =document.getElementById("ttl").value
+                var ob={ordervalue:ordervalue,cnamevalue:cnamevalue,billdtvalue:billdtvalue,shipdtvalue:shipdtvalue,ottlvalue:ottlvalue}
+                arr.push(ob);
+                
+                displaydata();
+
+
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <form>
+            OrderId :<input type="text" id="oid" name="oid"><br>
+            Customer name : <input type="text" id="cname" name="cname"><span id="errcust"></span><br>
+            Enter Billing Date : <input type="text" id="bdt" name="oid"><br>
+            Enter shipping date :<input type="text" id="sdt" name="oid"><br>
+            Order Total : <input type="text" id="ttl" name="oid"><br>
+            <button type="button" id="btn" name="btn" onclick="validate()">Submit</button>
+        </form>
+        <div id="mydiv">
+
+        </div>
+    </body>
+</html>

@@ -10,6 +10,7 @@
 
         }
         function validate_un() {
+            var pattern=/^[A-Za-z]+$/;
             un = document.getElementById("un").value;
             if (un==="" || un.trim().length === 0) {
                 document.getElementById("errun").innerHTML = "Username cannot be empty";
@@ -20,12 +21,18 @@
             {document.getElementById("errun").innerHTML = " ";
             
             }
+            if(un.match(pattern))
+                 true;
+                else{
+                    document.getElementById("errun").innerHTML = "Username should be only alphabets";
+                     return false;
+            }
             if(un.length<6 || un.length>10){
-                document.getElementById("errun1").innerHTML = "check length of username"
+                document.getElementById("errun").innerHTML = "check length of username"
                 
             }
             else{
-                document.getElementById("errun1").innerHTML = " ";
+                document.getElementById("errun").innerHTML = " ";
                 return true;
 
             }
@@ -34,15 +41,26 @@
 
         }
         function validate_pass() {
+           
             pass = document.getElementById("pass").value;
-            if (pass === "" || pass.trim().length === 0) {
+            if (pass == "" || pass.trim().length == 0) {
                 document.getElementById("errpass").innerHTML = "Password cannot be empty"
                 return false;
             }
+            else{
             document.getElementById("errpass").innerHTML = ""
-            return true;
+            }
+            
+            if(pass.length<8){
+                document.getElementById("errpass").innerHTML = "check length of password";
+                
+            }
+            else{
+                document.getElementById("errpass").innerHTML = "";
+                return true;
 
-        }
+            }
+    }
 
     </script>
 
